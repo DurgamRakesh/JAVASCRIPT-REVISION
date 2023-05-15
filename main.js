@@ -705,7 +705,7 @@
 
 // function x(y){
 //     return y.salary+=1000;
-    
+
 // }
 // console.log(x(obj));
 // console.log(obj);
@@ -762,3 +762,767 @@
 // console.log(x);
 // console.log(y);
 // console.log(z);
+
+//-----------------------------------------------------------------------
+
+// let studentRecords = [{ name: 'John', id: 123, marks: 98 },
+// { name: 'Baba', id: 101, marks: 23 },
+// { name: 'yaga', id: 200, marks: 45 },
+// { name: 'Wick', id: 115, marks: 75 }]
+
+
+// let up = studentRecords.map((e) => {
+//     return e.name.toUpperCase()
+// })
+// console.log(up);
+
+// let more = studentRecords.filter(e => {
+//    return e.marks > 50
+// })
+// console.log(more);
+// let more1 = studentRecords.filter(e => {
+//     return e.marks > 50 && e.id > 120
+//  })
+//  console.log(more1);
+
+//  let sum = studentRecords.reduce((a,b) => a+b.marks,0)
+//  console.log(sum)
+
+//  let name = studentRecords.filter(e => e.marks > 50).map(e => e.name)
+//  console.log(name)
+
+//  let sum1 = studentRecords.filter(e => e.id > 120).reduce((a,b) => a+b.marks,0)
+//  console.log(sum1)
+
+//  let less50 = studentRecords.filter(e => e.marks <50).map(e => e.marks+15)
+//  let gt50 = studentRecords.filter(e => e.marks > 50).map(e => e.marks)
+//  let sum2 = less50.concat(gt50).reduce((a,b) => a+b,0)
+//  console.log(sum2)
+
+//  let arr = [];
+
+//  function s(name,roll,age){
+//     this.name = name,
+//     this.roll = roll,
+//     this.age = age
+//  }
+
+//  let n = new s('rakesh',5882,24)
+
+//  arr.push(n)
+//  console.log(arr)
+
+
+// document.getElementById('text');
+// document.getElementsByTagName('h1');
+// document.getElementsByClassName('box')
+
+// document.getElementById('new-h1').innerText = 'hello world'
+
+
+// function change(){
+// let div = document.getElementById('main1')
+
+//     if(div.style.flexDirection == 'row'){
+//         div.style.flexDirection = 'column'
+//     }else{
+//         div.style.flexDirection = 'row'
+//     }
+// }
+// let h1 = document.getElementById('new-h1');
+// h1.style.color ='red'
+// h1.setAttribute('id','heading')
+
+// document.getElementById('n-btn').addEventListener('click', () => {
+//     document.getElementById('n-h1').innerText = 'prepbytes'
+// })
+
+
+// function time() {
+//     let date = new Date();
+//     let hrs = date.getHours();
+//     let mins = date.getMinutes();
+//     let secs = date.getSeconds();
+
+//     document.getElementById('mins').innerHTML = mins +':'
+//     document.getElementById('secs').innerHTML = secs +':'
+
+//     if(hrs < 10){
+//         hrs = '0'+hrs
+//     }
+//     if(mins < 10){
+//         mins = '0'+ mins
+//     }
+//     if(hrs > 12){
+//         hrs = hrs-12
+//     document.getElementById('apm').innerHTML = 'PM'     
+//     }
+//     else{
+//     document.getElementById('apm').innerHTML = 'AM'
+//     }
+//     document.getElementById('hrs').innerHTML = hrs + ':'
+// }
+// setInterval(time,1000)
+
+
+// let btn = document.getElementById('s-btn')
+// btn.addEventListener('click', () => {
+//     let select = document.getElementById('s')
+//     let newvalue = select.options[select.selectedIndex].value
+//     document.getElementById('selectedyear').innerText = newvalue
+
+// })
+
+
+// function fn() {
+//     console.log('function with 0 parameter');
+// }
+// fn()
+
+// function sun(a, b) {
+//     console.log('sum:', a + b);
+// }
+// sun(4, 5)
+
+// let arrow = () => {
+//     console.log('hello this is arrow function');
+// }
+// arrow()
+
+// var x = 21;
+// var girl = function () {
+//     console.log(x);
+//     var x = 20;
+// };
+// girl();
+
+// var x = 21;
+// girl();
+// console.log(x)
+// function girl() {
+//     console.log(x);
+//     var x = 20;
+// };
+
+// var x = 21;
+// a();
+// b();
+
+// function a() {
+//     x = 20;
+//     console.log(x);
+// };
+
+// function b() {
+//     x = 40;
+//     console.log(x);
+// };
+
+// function fac(n){
+//     if(n==0){
+//         return 1
+//     }
+//     else{
+//         return n * fac(n-1)
+//     }
+// }
+
+// let myfac = fac(5)
+// console.log(myfac);
+
+// console.log(a)   //Uncaught ReferenceError: a is not defined
+
+// console.log(a)
+// var a            //undefined
+
+// console.log(a)
+// let a            // Uncaught ReferenceError: Cannot access 'a' before initialization
+
+// console.log(a)
+// const a          //Uncaught SyntaxError: Missing initializer in const declaratio
+
+// let a 
+// console.log(a);     //undefined
+
+// let a 
+// console.log(a);     //undefined
+//a = 10
+
+// console.log('hi'/2);   //NaN
+
+// var a = null;
+// console.log(a);       //null
+
+
+// let p = {
+//     name:'rakesh',
+//     age:23,
+//     details(){
+//         return (this.name+this.age)
+//     }
+// }
+// let c ={
+
+// }
+
+// c.__proto__ = p
+
+// console.log(c);
+// console.log(c.details());
+
+// const arr1 = [1,2,3,4,5,6];
+
+// let sumobj = {
+//     add:function(array){
+//         let sum = 0;
+//         for(let i = 0; i < array.length; i++){
+//             sum+=array[i]
+//         }
+//         console.log(sum);
+//     }
+// }
+
+// Array.__proto__ = sumobj;
+// Array.add(arr1)
+
+// let obj = {
+//     name:'abc',
+//     age:23,
+//     roll:21
+// }
+
+// let keys = Object.keys(obj)
+// let values = Object.values(obj)
+// console.log(keys);
+// console.log(values);
+
+
+
+
+
+// function myfun(callback,msg){
+//     console.log(callback(),msg);
+// }
+
+// function call(){
+//     return 'hello'
+// }
+
+// myfun(call,'welcome')
+
+
+
+// function s(n,time){
+//     setTimeout(() => {
+//         console.log(n);
+//     },time)
+// }
+
+// s(1,1000)
+// s(2,2000)
+// s(3,3000)
+
+// setTimeout(() => {
+//     console.log(1);
+//     setTimeout(() => {
+//         console.log(2);
+//         setTimeout(() => {
+//             console.log(3);
+//         }, 3000);
+//     }, 2000);
+// }, 1000);
+
+// for(let i = 1; i <= 10; i++){
+//     setTimeout(() => {
+//         console.log(i);
+//     }, 1000 * i);
+// }
+
+// let p = (n) => new Promise((res, rej) => {
+//     if(n!==0){
+//         res('sucess')
+//     }
+//     else{
+//         rej('error')
+//     }
+// })
+// p(50).then(d => console.log(d)).catch(d => console.log(d))
+
+// let p = new Promise((res, rej) => {
+//     setTimeout(() => {
+//         res('hello')
+//     },5000)
+// })
+
+
+// async function myfun(){
+//     console.log('first');
+//     let r = await p;
+//     console.log(r);
+//     console.log('last');
+// }
+
+// myfun()
+
+// let str = 'hhfhf';
+
+// let s = new Set();
+
+// for(let i = 0; i < str.length; i++){
+//     s.add(str[i])
+// }
+// console.log(s);
+// let r =''
+// for(let x of s){
+//     r+=x
+// }
+// console.log(r)
+
+
+// let str = 'hhfdosohf';
+
+// let s = new Map();
+
+// for(let i = 0; i < str.length; i++){
+//     if(s.has(str[i])){
+//         let val = s.get(str[i])
+//         s.set(str[i],val+1)
+//     }
+//     else{
+//         s.set(str[i],1)
+//     }
+// }
+// console.log(s);
+// for(let [k,v] of s){
+//     console.log(k,v)
+
+// }
+
+// var num = 6;
+// var res
+// switch(num){
+//     case 1:
+//     res = 1
+//     break 
+//     case 2:
+//     res = 2
+//     break 
+//     case 3:
+//     res = 3
+//     break 
+//     case 4:
+//     res = 4
+//     break 
+//     case 5:
+//     res = 5
+//     break 
+//     case 6:
+//     res = 6
+//     break 
+//     default:
+//         res = 'osho'
+// }
+// console.log(res);
+
+// let arr = [1,2,3,4,5,6]
+// let sum = 0;
+
+// for(let i = 0; i < arr.length; i++){
+//     sum+=arr[i]
+// }
+// console.log(sum);
+// console.log(arr.reduce((a, b) => a+b,0))
+
+
+// let num = 12345;
+
+// function findsum(n){
+//     let sum = 0;
+//     while(n > 0){
+//         sum+=(n%10)
+//         n = parseInt(n/10)
+//     }
+//     return sum
+// }
+// console.log(findsum(num));
+
+// var a = 10;
+// function outer(){
+//     var b = 20;
+//     function inner1(){
+//         var c = 30;
+//         function inner2(){
+//             var res = a+b+c
+//             console.log(res)
+//         }
+//         return inner2()
+//     }
+//     return inner1()
+// }
+// outer()
+
+// let p = new Promise((res, rej) => {
+//     res(10)
+// })
+
+// p.then(e => {
+//     console.log(e);
+//     return e+1
+// }).then(e => {
+//     console.log(e);
+//     return e+1
+// }).then(e =>{
+//     console.log(e);
+// })
+
+// let v1 = Symbol('hello')
+// let v2 = Symbol('hello')
+// console.log(v1===v2);
+
+// class p{
+//     constructor(name,id,roll){
+//         this.name = name
+//         this.id = id
+//         this.roll = roll
+//     }
+// }
+
+// let person = new p('rakesh',5882,21)
+// console.log(person);
+
+
+// function v1(a){
+//     return function v2(b){
+//         return function v3(c){
+//             return a+b+c
+//         }
+//     }
+// }
+
+// let v = v1(20)(30)(40)
+// console.log(v)
+
+
+// function* genfun(){
+//     yield 20
+//     yield 30
+//     yield 40
+// }
+
+// let v = genfun()
+// console.log(v.next())
+// console.log(v.next())
+// console.log(v.next())
+// console.log(v.next())
+
+// let N =4
+// for(let i = 1; i<=N;i++){
+//     let str = '';
+//     for(let j = 1; j <=N ;j++){
+//       str = str + '*'
+//     }
+//     console.log(str)
+//   }
+
+// let N =4
+// for(let i = 1; i<=N;i++){
+//     let str = '';
+//     for(let j = 1; j <=i ;j++){
+//       str = str + '*'
+//     }
+//     console.log(str)
+//   }
+
+//   var x = 21;
+//   var girl = function () {
+//       console.log(x);
+//       var x = 20;
+//   };
+//   girl ();
+
+// let set = new Set();
+
+// let arr =[1,2,3,4,5,6];
+
+// set.add(4);
+// set.add(5);
+// set.add(6);
+// console.log(set);
+// console.log(set.size);
+// console.log(set.has(4));
+// set.delete(4);
+// console.log(set.clear());
+
+// set.add(arr);
+// console.log(set)
+
+
+// let map = new Map();
+
+// map.set('first','hello')
+// map.set('sec','welcome')
+// map.set('third','to')
+// console.log(map.get('first'))
+// console.log(map.has('first'))
+// map.delete('first')
+// console.log(map)
+
+let str = 'sldhhduofg';
+
+// let n = [... new Set(str)]
+// console.log(n)
+// let res =''
+// for(x of n){
+//   res+=x
+// }
+// console.log(res);
+
+// let map = new Map();
+
+// for(let i = 0; i < str.length; i++){
+//   if(map.has(str[i])){
+//     let value = map.get(str[i])
+//     map.set(str[i],value+1)
+//   }
+//   else{
+//     map.set(str[i],1)
+//   }
+// }
+// console.log(map);
+
+// for(let [k,v] of map){
+//   console.log(k,v);
+// }
+
+let n = 5;
+
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = 1; c <= n; c++){
+//     str+='*'
+//   }
+//   console.log(str)
+// }
+  
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = 1; c <= r; c++){
+//     str+='*'
+//   }
+//   console.log(str)
+// }
+
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = r; c <= n; c++){
+//     str+='*'
+//   }
+//   console.log(str)
+// }
+
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = r; c <= n; c++){
+//     str+=' '
+//   }
+//   for(let c1 = 1; c1 <= r; c1++){
+//     str+='*'
+//   }
+//   console.log(str)
+// }
+
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = 1; c <= r; c++){
+//     str+=' '
+//   }
+//   for(let c1 = r; c1 <= n; c1++){
+//     str+='*'
+//   }
+//   console.log(str)
+// }
+
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = 1; c <= n-r+1; c++){
+//     str+='#'
+//   }
+//   for(let c1 = 1; c1 <= r; c1++){
+//     str+='*'
+//   }
+//   console.log(str);
+// }
+
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = 1; c <= n-(r); c++){
+//     str+=' '
+//   }
+//   for(let c1 = 1; c1 <= (2*r-1); c1++){
+//     str+='*'
+//   }
+//   console.log(str);
+// }
+
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = 1; c <= n-(r); c++){
+//     str+=' '
+//   }
+//   for(let c1 = 1; c1 <= (2*r-1); c1++){
+//     str+='*'
+//   }
+//   console.log(str);
+// }
+// for(let r = 1; r <= n; r++){
+//   let str = '';
+//   for(let c = 1; c <= r; c++){
+//     str+=' '
+//   }
+//   for(let c1 = 1; c1 <= 2*(n-r)-1; c1++){
+//     str+='*'
+//   }
+//   console.log(str);
+// }
+
+
+// let arr = [1,3,4,5,4,5,6,7,7,6,8,9];
+
+// let unique = arr.filter((e,i) => {
+//   return arr.indexOf(e) == i
+// })
+// console.log(unique);
+
+// let u = [... new Set(arr)];
+// console.log(u);
+
+// let dup = arr.filter((e,i) => {
+//   return arr.indexOf(e) != i
+// })
+// console.log(dup);
+
+// let obj = {}
+//  arr.filter(element => {
+//   if(obj[element]){
+//     obj[element]++
+//   }
+//   else{
+//     obj[element]=1
+//   }
+//   console.log(obj);
+// });
+
+// let s = 'level';
+
+// let s1 = s.split('').reverse().join('')
+
+// console.log(s1 === s);
+
+// let arr = [1,2,3,4,5,6];
+
+// let even = []
+// for(let i = 0; i < arr.length; i++){
+//   if(arr[i] % 2 == 0){
+//     even.push(arr[i])
+//   }
+// }
+// console.log(even);
+
+// // let odd = []
+// // for(let i = 0; i < arr.length; i++){
+// //   if(arr[i] % 2 !== 0){
+// //     odd.push(arr[i])
+// //   }
+// // }
+// // console.log(odd);
+
+// let count = 0;
+// for(let i = 0; i < arr.length; i++){
+//   if(arr[i] % 2 == 0){
+//     count+=arr[i]
+//   }
+// }
+// console.log(count);
+
+// let num = 12345;
+
+// // let d = num/10000
+// // console.log(parseInt(d));
+
+
+//   let e = parseInt(num/10);
+
+// console.log(e)
+
+// let maindiv = document.querySelector('#divmain')
+// let chaild = document.querySelector('#chaild')
+// let button = document.querySelector('#button')
+
+// // button.addEventListener('click', () => {
+// //     console.log('button clicked');
+// // },true)
+
+// // chaild.addEventListener('click', () => {
+// //     console.log('chaild clicked');
+// // },true)
+
+// // divmain.addEventListener('click', () => {
+// //     console.log('divmain clicked');
+// // },true)
+
+// button.addEventListener('click', (e) => {
+//     console.log('button clicked');
+//     // e.stopPropagation()
+//     e.stopImmediatePropagation()
+
+// })
+// button.addEventListener('click', (e) => {
+//     console.log('button dup clicked');
+// })
+
+// chaild.addEventListener('click', () => {
+//     console.log('chaild clicked');
+// })
+
+// divmain.addEventListener('click', () => {
+//     console.log('divmain clicked');
+// })
+
+
+// class p{
+//     constructor(name){
+//         this.name = name
+//     }
+//     get(){
+//         console.log(this.name);
+//     }
+// }
+
+// class s extends p{
+//     constructor(name,roll){
+//         super(name)
+//         this.roll = roll
+//     }
+//     get(){
+//         console.log(this.name,this.roll);
+//     }
+// }
+
+// let per = new p('hello')
+// per.get()
+
+// let stu = new s('abc',21)
+// stu.get()
+
+
+// let obj = [
+//     {
+//         name:"a",id:50,marks1:50,marks2:100,marks3:150
+//     }
+// ]
+
+// let sum = obj.filter(e => e.name == 'a').reduce((a, b) => {
+//     return a+b.marks1+b.marks2+b.marks3
+// },0)
+// console.log(sum)
+
