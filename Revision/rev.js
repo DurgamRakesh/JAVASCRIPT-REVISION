@@ -349,5 +349,319 @@
 // console.log(d);
 
 //----------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------
+
+// var a = '10';
+// var b = 10;
+
+// console.log(a==b); //true
+// console.log(a===b) //false
 
 
+// const arr = [1,2,3,4,5,6];
+// const a = [...arr];
+// arr[6] = 7;
+
+// console.log(...arr);
+// console.log(...a);
+
+// const arr1 = [1,2,3];
+// const arr2 = [4,5,6];
+
+// const arr3 = [...arr1,...arr2];
+// console.log(arr3);
+
+
+// let obj = {
+//     name:"rakesh"
+// }
+// let newo = {...obj};
+// console.log(newo)
+
+// const [x,y,...z] = arr;
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+
+// function myfun1(){
+//     return 'hello'
+// }
+
+// function myfun2(callback){
+//     let msg = 'welcome';
+//     let c = callback();
+//     console.log(msg,c)
+
+// }
+
+// myfun2(myfun1)
+
+// function outer(){
+//     function inner(){
+//         return 'inner fun'
+//     }
+//     return inner();
+// }
+
+// console.log(outer());
+
+// const fun = () => {
+//     console.log('arrow fun')
+// }
+// fun();
+
+// var a = 10;
+// function outer(){
+//     var b = 20;
+//     function inner(){
+//         var c = 30;
+//         var sum = a+b+c;
+//         return sum;
+//     }
+//     return inner();
+// }
+
+// console.log(outer());
+
+// let obj = {
+//     name:"rakesh",
+//     id:100
+// }
+
+// function getdata(p,p1){
+//     console.log(this.name,this.id,p,p1)
+// }
+
+// // getdata.call(obj,'hello');
+// // getdata.apply(obj,['hello',101]);
+// let v = getdata.bind(obj);
+// v('hello',101);
+
+// function data(name,id){
+//     this.name = name,
+//     this.id = id
+// }
+// let d = new data('rakesh',101);
+// console.log(d);
+
+// class person{
+//     constructor(name,id){
+//         this.name = name,
+//         this.id = id
+//     }
+// }
+
+// let d = new person('rakesh',101);
+// person.prototype.state = 'ts';
+// console.log(d);
+// console.log(d.state);
+
+// setTimeout(() => {
+//     console.log('hi')
+// },5000);
+
+// setInterval(() => {
+//     console.log('hi')
+// },1000);
+
+// let p = new Promise((res,rej) => {
+//     let v = false;
+//     if(v){
+//         res('success')
+//     }
+//     else{
+//         rej('error')
+//     }
+// }).then((x) => {
+//     console.log(x);
+// }).catch((x) => {
+//     console.log(x);
+// })
+
+// let p = new Promise((res,rej) => {
+//     let v = true;
+//     if(v){
+//         res(10)
+//     }
+//     else{
+//         rej('error')
+//     }
+// }).then((x) => {
+//     console.log(x);
+//     return x+20
+// }).then((x) => {
+//     console.log(x);
+//     return x+30
+// }).then((x) => {
+//     console.log(x);
+// }).catch((x) => {
+//     console.log(x);
+// })
+
+// let p = new Promise((res,rej) => {
+//     let v = true;
+//     if(v){
+//         setTimeout(() => {
+//             res(10)
+//         },5000)
+//     }
+//     else{
+//         rej('error')
+// }   
+// })
+// async function fun(){
+//     console.log('before');
+//     let v = await p;
+//     console.log(v);
+//     console.log('after');
+// }
+// fun();
+
+// const arr = [1,2,3,4,5,6];
+
+// const double = arr.map((e) => e*2);
+// console.log(double);
+
+// const fil = arr.filter((e) => e > 4);
+// console.log(fil);
+
+// const sum = arr.reduce((a,b) => a+b,0);
+// console.log(sum);
+
+// const com = arr.map((e) => e*2).filter((e) => e> 6).reduce((a,b) => a+b,0);
+// console.log(com);
+
+// 
+// document.getElementById('parent').addEventListener('click',() => {
+//     console.log('parent')
+// })
+// document.getElementById('chaild').addEventListener('click',() => {
+//     console.log('chaild')
+// })
+// document.getElementById('event1').addEventListener('click',(e) => {
+//     console.log('event1')
+//     // e.stopPropagation();
+//     e.stopImmediatePropagation();
+// })
+// document.getElementById('event1').addEventListener('click',(e) => {
+//     console.log('event1 dup')
+// })
+// document.getElementById('event2').addEventListener('click',() => {
+//     console.log('event2')
+// })
+
+// document.getElementById('ul').addEventListener('click',(e) => {
+//     e.target.classList.toggle('li');
+//     console.log(e.target.textContent)
+// })
+
+// function* genfun(){
+//     yield 10
+//     yield 20
+//     yield 30
+// }
+
+// let v = genfun();
+// console.log(v.next());
+// console.log(v.next());
+// console.log(v.next());
+// console.log(v.next());
+
+// console.log('before loop');
+// for(let i = 1; i <= 10; i++){
+//     if(i == 5){
+//         break;
+//     }
+//     console.log(i);
+// }
+// console.log('after loop');
+
+// console.log('before loop');
+// for(let i = 1; i <= 10; i++){
+//     if(i == 5){
+//         continue;
+//     }
+//     console.log(i);
+// }
+// console.log('after loop');
+
+// var a = 4;
+// var b;
+// switch(a){
+//     case 1:
+//         b=1
+//     break
+//     case 2:
+//         b=2
+//         break
+//     case 3:
+//         b=3
+//         break
+//     case 4:
+//         b=4
+//         break
+//     default:
+//         b='error'
+// }
+// console.log(b);
+
+
+
+
+// (function(a,b){
+//     let sum = a+b
+//     console.log(sum)
+// })(4,5);
+
+// function fibo(n){
+//     if(n<=1){
+//         return n
+//     }
+//     else{
+//         return (fibo(n-1) + fibo(n-2))
+//     }
+// }
+
+// for(let i = 0; i <= 5; i++){
+//     console.log(fibo(i))
+// }
+
+// let a = 10;
+// function fun(){
+//     a = 20;
+//     console.log(a)
+// }
+// fun()
+// console.log(a); //10
+
+// const arr = [1,2,3,4,5,6];
+
+// console.log(...arr);
+
+// const arr2 = [...arr]
+// console.log(arr2)
+
+
+// let str = 'welcome';
+
+// //without inbuilt method
+// let revstr = '';
+// for(let i = str.length-1; i >= 0 ;i--){
+//     revstr = revstr+str[i]
+// }
+// console.log(revstr);
+
+// //with inbulit method
+// let revstr2 = str.split('').reverse().join('');
+// console.log(revstr2)
+
+function person(name,id){
+    this.name = name,
+    this.id = id
+
+}
+
+let dataof = new person('rakesh',100)
+
+console.log(dataof)

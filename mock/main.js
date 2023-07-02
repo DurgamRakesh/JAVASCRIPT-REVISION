@@ -1,8 +1,8 @@
-// // console.log(a) 
-// let a = 10
+// console.log(a) //un 
+// var a = 10
 // function x(){
-//     console.log(a) //10 c
-//     let a = 20
+//     console.log(a) //un
+//     var a = 20
 //     console.log(a); //20
 // }
 // console.log(a); //10
